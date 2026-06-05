@@ -6,13 +6,310 @@
 
 <title>UK Business | Accounting, Tax, HR & Business Startup Services</title>
 
-<meta name="description"
-content="Professional accounting, company formation, payroll, HR, tax and immigration consultancy services in London.">
-
-<link rel="stylesheet" href="css/style.css">
+<meta name="description" content="Professional accounting, company formation, payroll, HR, tax and immigration consultancy services in London.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+line-height:1.6;
+color:#222;
+background:#fff;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+header{
+background:#0B1F3A;
+position:sticky;
+top:0;
+z-index:999;
+padding:15px 0;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#fff;
+font-size:28px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:500;
+}
+
+.btn{
+background:#D4AF37;
+color:#000;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+border:2px solid #fff;
+color:#fff;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(11,31,58,.85),rgba(11,31,58,.85)),
+url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:#fff;
+}
+
+.hero h1{
+font-size:60px;
+max-width:800px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#0B1F3A;
+}
+
+.stats{
+background:#F5F7FA;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+text-align:center;
+}
+
+.stats h2{
+font-size:55px;
+color:#0B1F3A;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0B1F3A;
+}
+
+.about{
+background:#fafafa;
+text-align:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+font-size:18px;
+}
+
+.testimonial{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+display:none;
+text-align:center;
+}
+
+.testimonial.active{
+display:block;
+}
+
+.stars{
+color:#D4AF37;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.faq-item{
+margin-bottom:15px;
+}
+
+.faq-question{
+width:100%;
+padding:18px;
+background:#0B1F3A;
+color:#fff;
+border:none;
+cursor:pointer;
+font-size:16px;
+text-align:left;
+}
+
+.faq-answer{
+display:none;
+background:#f5f5f5;
+padding:20px;
+}
+
+.contact{
+background:#F5F7FA;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:15px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+button{
+border:none;
+cursor:pointer;
+}
+
+.contact-details{
+text-align:center;
+margin-top:40px;
+}
+
+footer{
+background:#0B1F3A;
+color:#fff;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.section-title{
+font-size:32px;
+}
+}
+
+</style>
 </head>
 
 <body>
@@ -20,9 +317,7 @@ content="Professional accounting, company formation, payroll, HR, tax and immigr
 <header>
 <div class="container nav">
 
-<div class="logo">
-UK Business
-</div>
+<div class="logo">UK Business</div>
 
 <nav>
 <ul>
@@ -41,29 +336,29 @@ UK Business
 
 <section class="hero">
 
-<div class="container hero-content">
+<div class="container">
 
-<h1>
-Start, Grow & Manage Your UK Business With Confidence
-</h1>
+<h1>Start, Grow & Manage Your UK Business With Confidence</h1>
 
 <p>
-Company Formation, Accounting, Tax, HR, Payroll,
-Immigration Consultancy & Business Support.
+Professional company formation, accounting, tax planning,
+payroll, HR, immigration consultancy and business advisory services.
 </p>
 
 <div class="hero-buttons">
 <a href="#contact" class="btn">Book Consultation</a>
-<a href="#services" class="btn-secondary">Explore Services</a>
+<a href="#services" class="btn-secondary">Our Services</a>
 </div>
 
 </div>
 
 </section>
 
-<section class="stats">
+<section class="stats fade">
 
-<div class="container stats-grid">
+<div class="container">
+
+<div class="stats-grid">
 
 <div>
 <h2 class="counter" data-target="500">0</h2>
@@ -82,9 +377,11 @@ Immigration Consultancy & Business Support.
 
 </div>
 
+</div>
+
 </section>
 
-<section id="services">
+<section id="services" class="fade">
 
 <div class="container">
 
@@ -94,32 +391,32 @@ Immigration Consultancy & Business Support.
 
 <div class="card">
 <h3>Business Startup</h3>
-<p>Company formation, registration and startup advisory.</p>
+<p>Company formation and startup advisory.</p>
 </div>
 
 <div class="card">
 <h3>Accounting</h3>
-<p>Bookkeeping, annual accounts and reporting.</p>
+<p>Bookkeeping, reporting and annual accounts.</p>
 </div>
 
 <div class="card">
 <h3>Tax Services</h3>
-<p>Corporation tax, VAT and HMRC compliance.</p>
+<p>VAT, corporation tax and HMRC compliance.</p>
 </div>
 
 <div class="card">
 <h3>HR & Payroll</h3>
-<p>Employee management and payroll processing.</p>
+<p>Payroll processing and HR support.</p>
 </div>
 
 <div class="card">
-<h3>Immigration</h3>
-<p>Visa guidance and business immigration support.</p>
+<h3>Immigration Consultancy</h3>
+<p>Business immigration and visa support.</p>
 </div>
 
 <div class="card">
 <h3>Company Secretarial</h3>
-<p>Corporate governance and compliance services.</p>
+<p>Corporate governance and compliance management.</p>
 </div>
 
 </div>
@@ -128,86 +425,71 @@ Immigration Consultancy & Business Support.
 
 </section>
 
-<section id="about" class="about">
+<section id="about" class="about fade">
 
 <div class="container">
 
 <h2 class="section-title">Why Choose UK Business?</h2>
 
 <p>
-We help entrepreneurs and companies navigate complex business,
-financial and legal requirements with confidence.
+We help startups, entrepreneurs and growing businesses stay compliant,
+save time and focus on growth through professional accounting,
+tax, HR and legal support.
 </p>
 
 </div>
 
 </section>
 
-<section id="reviews">
+<section id="reviews" class="fade">
 
 <div class="container">
 
-<h2 class="section-title">What Clients Say</h2>
-
-<div class="testimonial-slider">
+<h2 class="section-title">Client Testimonials</h2>
 
 <div class="testimonial active">
-<p>
-Professional service and excellent communication throughout.
-</p>
-<h4>Client Review</h4>
+<div class="stars">★★★★★</div>
+<p>Professional service and excellent communication throughout.</p>
 </div>
 
 <div class="testimonial">
-<p>
-The company formation process was fast and stress-free.
-</p>
-<h4>Business Owner</h4>
+<div class="stars">★★★★★</div>
+<p>The company formation process was fast and stress-free.</p>
 </div>
 
 <div class="testimonial">
-<p>
-Reliable tax and payroll support for our growing team.
-</p>
-<h4>Company Director</h4>
-</div>
-
+<div class="stars">★★★★★</div>
+<p>Reliable accounting and payroll support for our growing team.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="faq">
+<section id="faq" class="fade">
 
 <div class="container">
 
 <h2 class="section-title">Frequently Asked Questions</h2>
 
 <div class="faq-item">
-<button class="faq-question">
-How long does company registration take?
-</button>
+<button class="faq-question">How long does company registration take?</button>
 <div class="faq-answer">
 <p>Most registrations are completed within 24–48 hours.</p>
 </div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">
-Do you offer payroll services?
-</button>
+<button class="faq-question">Do you provide payroll services?</button>
 <div class="faq-answer">
 <p>Yes, we provide complete payroll and HR support.</p>
 </div>
 </div>
 
 <div class="faq-item">
-<button class="faq-question">
-Can you assist with immigration matters?
-</button>
+<button class="faq-question">Can you assist with immigration matters?</button>
 <div class="faq-answer">
-<p>Yes, our consultants can guide you through business immigration processes.</p>
+<p>Yes. We offer immigration consultancy and business visa support.</p>
 </div>
 </div>
 
@@ -215,7 +497,7 @@ Can you assist with immigration matters?
 
 </section>
 
-<section id="contact">
+<section id="contact" class="contact fade">
 
 <div class="container">
 
@@ -224,12 +506,10 @@ Can you assist with immigration matters?
 <form id="contactForm">
 
 <input type="text" placeholder="Full Name" required>
-
 <input type="email" placeholder="Email Address" required>
-
 <input type="tel" placeholder="Phone Number">
 
-<textarea placeholder="How can we help?" rows="5"></textarea>
+<textarea rows="5" placeholder="Tell us about your business needs"></textarea>
 
 <button type="submit" class="btn">
 Submit Inquiry
@@ -239,7 +519,7 @@ Submit Inquiry
 
 <div class="contact-details">
 
-<p><strong>Address:</strong> 40 Gracechurch St, London EC3V 0BT</p>
+<p><strong>Address:</strong> 40 Gracechurch St, London EC3V 0BT, United Kingdom</p>
 <p><strong>Phone:</strong> +44 20 3800 6572</p>
 
 </div>
@@ -250,17 +530,113 @@ Submit Inquiry
 
 <footer>
 
-<div class="container">
-
 <p>
 © 2026 UK Business. All Rights Reserved.
 </p>
 
-</div>
-
 </footer>
 
-<script src="js/script.js"></script>
+<a href="https://wa.me/" class="whatsapp">💬</a>
+
+<script>
+
+// FAQ
+
+document.querySelectorAll('.faq-question').forEach(btn=>{
+btn.addEventListener('click',()=>{
+
+const answer=btn.nextElementSibling;
+
+answer.style.display=
+answer.style.display==="block"
+? "none"
+: "block";
+
+});
+});
+
+// Counter
+
+document.querySelectorAll('.counter').forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.dataset.target;
+const count=+counter.innerText;
+
+const inc=target/100;
+
+if(count<target){
+
+counter.innerText=Math.ceil(count+inc);
+
+setTimeout(update,20);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+update();
+
+});
+
+// Testimonials
+
+const testimonials=
+document.querySelectorAll('.testimonial');
+
+let current=0;
+
+setInterval(()=>{
+
+testimonials[current].classList.remove('active');
+
+current=(current+1)%testimonials.length;
+
+testimonials[current].classList.add('active');
+
+},4000);
+
+// Contact Form
+
+document.getElementById('contactForm')
+.addEventListener('submit',function(e){
+
+e.preventDefault();
+
+alert(
+'Thank you! Your consultation request has been received.'
+);
+
+this.reset();
+
+});
+
+// Scroll Animation
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+
+</script>
 
 </body>
 </html>
